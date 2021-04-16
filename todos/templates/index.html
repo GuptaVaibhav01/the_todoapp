@@ -1,0 +1,10 @@
+{% include 'partials/header.html' %}
+	<main>
+		<a href="/todos/add"> <h2 style= "color: red"> New Todo + </h2></a>
+		<ul>
+			{% for todo in todos%}
+			<li><a href="/todos/details/{{todo.id}}"><h3>{{todo.title}}</h3></a></li>
+			{% endfor %}
+		</ul>	
+	</main>
+{% include 'partials/footer.html' %}
